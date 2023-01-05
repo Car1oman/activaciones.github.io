@@ -9,9 +9,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="botones">
-    <button onclick="openCamera()">Abrir Cámara</button>
-    <button id="tomar-foto">Tomar Foto</button>
+<div id="botones-foto" class="botones">
+    <button id="abrir" class="boton" onclick="openCamera()">Abrir Cámara</button>
+    <button class="boton" id="tomar-foto">Tomar Foto</button>
+</div>
+<div id="botones-enviar" class="botones">
+    <button id="reintentar" class="boton" onclick="openCamera()">Reintentar</button>
+    <button class="boton">Enviar Foto</button>
 </div>
 <div class="video">
     <video id="camera"></video>
@@ -20,9 +24,9 @@
     <canvas id="vista-previa"></canvas>
 </div>
 <script>
-    // ocultamos el canvas y el botón de tomar foto
-    //document.getElementById("tomar-foto").style.display = "none";
-    //document.getElementById("vista-previa").style.display = "none";
+    // ocultamos el canvas, boton de enviar y reintentar al cargar la pagina
+    document.getElementById("botones-enviar").style.display = "none";
+    document.getElementById("vista-previa").style.display = "none";
 
 
 
@@ -43,7 +47,19 @@
     var context = canvas.getContext('2d');
 
     document.getElementById('tomar-foto').addEventListener('click', function(){
-        context.drawImage(video, 0, 0, canvas.width, canvas.height)
+        document.getElementById("vista-previa").style.display = "block";
+        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+        document.getElementById("camera").style.display = "none";
+        document.getElementById("botones-foto").style.display = "none";
+        document.getElementById("botones-enviar").style.display = "block";
+    })
+
+    document.getElementById('reintentar').addEventListener('click', function(){
+        document.getElementById("vista-previa").style.display = "none";
+        document.getElementById("camera").style.display = "block";
+        document.getElementById("botones-foto").style.display = "block";
+        document.getElementById("botones-enviar").style.display = "none";
+        document.getElementById("abrir").style.display = "none";
     })
 
 </script>    
