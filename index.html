@@ -21,8 +21,8 @@
 </div>
 <script>
     // ocultamos el canvas y el botón de tomar foto
-    document.getElementById("tomar-foto").style.display = "none";
-    document.getElementById("vista-previa").style.display = "none";
+    //document.getElementById("tomar-foto").style.display = "none";
+    //document.getElementById("vista-previa").style.display = "none";
 
 
 
@@ -30,13 +30,13 @@
     // Comprobamos si el navegador soporta la API de cámara de la Web
         if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
             // Pedimos permiso al usuario para acceder a la cámara
-            navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+            navigator.mediaDevices.getUserMedia({video: {facingMode: "environment"}}).then(function(stream) {
             // Si el permiso es concedido, abrimos la cámara
             var video = document.getElementById('camera');
             video.srcObject = stream;
             video.play();
-    });
-    }
+            });
+        }
     }
     var video = document.getElementById('camera');
     var canvas = document.getElementById('vista-previa');
