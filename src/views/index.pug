@@ -1,0 +1,9 @@
+html
+  head
+    title Hoja de cálculo de ejemplo
+  body
+    h1 Hojas de la hoja de cálculo
+    ul
+      each sheetName in sheetNames
+        li
+          a(href=`/${sheetName}`) #{sheetName}

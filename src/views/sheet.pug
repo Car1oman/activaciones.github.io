@@ -1,0 +1,41 @@
+//-Archivo sheet.pug
+html
+  head
+    title #{sheetName}
+  body
+    h1 #{sheetName}
+    table
+      tbody
+        each row, index in rows
+          tr
+            td #{row.VICTORS}
+            td
+              a(href='#', onclick=`showImage('${row.ENLACES}')`) Ver Boleta
+    canvas#imageCanvas
+
+    button#clearBtn(type='button') Limpiar Canvas
+    a(href='/') Volver
+
+  script.
+    const imageCanvas = document.querySelector('#imageCanvas');
+    const ctx = imageCanvas.getContext('2d');
+
+    function showImage(imageUrl) {
+      // Limpiar el canvas antes de mostrar una nueva imagen
+      ctx.clearRect(0, 0, imageCanvas.width, imageCanvas.height);
+
+      const img = new Image();
+      img.src = imageUrl;
+      img.onload = function() {
+        imageCanvas.width = img.width;
+        imageCanvas.height = img.height;
+        ctx.drawImage(img, 0, 0);
+      };
+    }
+
+    function clearCanvas() {
+      ctx.clearRect(0, 0, imageCanvas.width, imageCanvas.height);
+    }
+
+    const clearBtn = document.querySelector('#clearBtn');
+    clearBtn.addEventListener('click', clearCanvas);
