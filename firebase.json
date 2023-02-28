@@ -1,20 +1,24 @@
 {
-    "hosting": {
-      "public": "build",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ],
-      "rewrites": [
-        {
-          "source": "**",
-          "destination": "/index.html"
-        }
-      ]
-    },
-    "scripts": {
-      "build": "react-scripts build"
-    }
+  "hosting": {
+    "public": "public",
+    "rewrites": [{
+      "source": "**",
+      "destination": "/index.html"
+    }],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "headers": [{
+      "source": "/views/**",
+      "headers": [{
+        "key": "Content-Type",
+        "value": "text/html"
+      }]
+    }]
+  },
+  "scripts": {
+    "build": "react-scripts build"
   }
-  
+}
