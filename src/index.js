@@ -1,6 +1,7 @@
-//archivo index.js
 const app = require('./app');
 
-app.listen(3000, () => {
-    console.log("Server all right")
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });
