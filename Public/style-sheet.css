@@ -1,0 +1,108 @@
+header {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 2em;
+    font-weight: bold;
+  }
+  
+  body{
+    display: flex;
+    justify-content: center;
+  }
+  
+  main{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    margin: 3em;
+  }
+  
+  table {
+  width: 100%;
+  border-collapse: collapse;
+  display: flex;
+  }
+  
+  th, td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  }
+  th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  }
+  
+  .header-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(173, 213, 0);
+    height: 40px;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin: 1em;
+    margin-left: 1em;
+    text-align: center;
+    color: white;
+  }
+  
+  #sis-logo {
+    height: 100%;
+    max-height: 100px;
+    max-width: 150px;
+    margin-left: 1em;
+    background-color: white;
+  }
+  
+  @media only screen and (orientation: portrait){
+    h1{
+        font-size: 2em;
+        margin: 1px;
+    }
+  
+    nav a{
+        background-color: gray;
+        color: white;
+        border-radius: 10px;
+        font-size: 2em;
+    }
+  
+    canvas {
+        border-style: solid;
+        border-radius: 5px;
+        border-color: #000;
+        width: 450px;
+        height: 980px;
+        margin-left: 15%;
+    }
+  
+    table {
+        background-color: rgb(173, 213, 0);
+        margin-bottom: 1%;
+        width: 95vw;
+        padding-left: 4em;
+    }
+  
+    td{
+        font-size: 1.3em;
+    }
+  
+  }
