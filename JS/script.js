@@ -1,4 +1,4 @@
-import API_KEY from './config.js';
+import API_KEY from '../prueba.js';
 async function init() {
   try {
     await gapi.client.init({
@@ -88,7 +88,7 @@ async function init() {
             <head>
               <title>${sheetName}</title>
               <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-              <link rel="stylesheet" type="text/css" href="style-sheet.css">
+              <link rel="stylesheet" type="text/css" href="./style-sheet.css">
               <link rel="icon" href="https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/da/57/1e/da571e7e-ebe3-0c8f-0a94-3b11e3d1ae1a/AppIcon-0-1x_U007emarketing-0-0-85-220-0-5.png/400x400bb.jpg">
               
             </head>
@@ -101,7 +101,7 @@ async function init() {
                 <nav>
                   <a href="https://prueba-374223.web.app/" id="enlace">Volver</a>
                 </nav>
-                <script src="sheet.js"></script>
+                <script src="./sheet.js"></script>
               </header>
               <main>
                 <canvas id="mi-boleta"></canvas>
