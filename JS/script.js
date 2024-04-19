@@ -119,6 +119,7 @@ async function init() {
                     const id = match ? match[1] : '';
                     // generar el enlace de exportación de vista previa
                     const link = `https://drive.google.com/uc?export=view&id=${id}`;
+                    console.log(link);
                     // generar una celda con un enlace a la vista previa de exportación
                     return `<td><a href="#" onclick="showImage('${link}'); return false;">Ver boleta</a></td>`;
                   } else {
