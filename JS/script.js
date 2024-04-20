@@ -118,7 +118,7 @@ async function init() {
                     const match = previewLink.match(/\/d\/(.+?)\//);
                     const id = match ? match[1] : '';
                     // generar el enlace de exportación de vista previa
-                    const link = `https://drive.google.com/uc?export=view&id=${id}`;
+                    const link = `https://lh3.google.com/u/0/d/${id}=k`;
                     console.log(link);
                     // generar una celda con un enlace a la vista previa de exportación
                     return `<td><a href="#" onclick="showImage('${link}'); return false;">Ver boleta</a></td>`;
