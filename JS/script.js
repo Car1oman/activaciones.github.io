@@ -99,7 +99,7 @@ async function init() {
                   <img id="sis-logo" alt="tienda-logo" src="https://images.falabella.com/v3/assets/bltb5a8befb95ca5f20/bltb812a50a0ffcae37/63a3e4f8cbf72835bf8b57f1/logo-falabella.svg">
                 </div>
                 <nav>
-                  <a href="https://prueba-374223.web.app/" id="enlace">Volver</a>
+                  <a href="https://car1oman.github.io/activaciones.github.io/" id="enlace">Volver</a>
                 </nav>
                 <script src="./sheet.js"></script>
               </header>
