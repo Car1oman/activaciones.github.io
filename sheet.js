@@ -24,7 +24,7 @@ if(enlace){
   enlace.addEventListener("click", function(event) {
     event.preventDefault();
     window.close(); // Cierra la página actual
-    window.location.href = "https://prueba-374223.web.app"; // Abre la página inicial
+    window.location.href = "https://car1oman.github.io/activaciones.github.io/"; // Abre la página inicial
   });
 }
 
